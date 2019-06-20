@@ -10,18 +10,72 @@
     width: 7em;
 }
 .Results__Title{
-    font-family:sans-serif;
+    font-family: "Source Sans Pro",sans-serif;
     font-size:4rem;
     letter-spacing: .3 em;
     text-align: center;
-    text-shadow: 1px 1px 3px #000;
+    text-transform: uppercase;
 }
 .Results__Wrapper {
-    background-color: #dfe1e6;
+    background-color: white;
     display: flex;
     flex: 25%;
     flex-wrap: wrap;
     margin: 0 auto;
     max-width: 980px;
     width: 100%;
+}
+
+
+
+.Title--Heading{
+    font-size:2rem;
+}
+
+@media (max-width:500px){
+    .Results__Wrapper {
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin: 0 auto;
+        max-width: 400px;   /*iphone-x 375 and below*/
+        justify-items:center;
+    }
+
+    .Results__Title{
+        font-family: "Source Sans Pro",sans-serif;
+        font-size:.8rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .Results__Card {
+        background-color: #7fcdff;
+        border-radius: 3px;
+        box-shadow: 0 3px 5px rgba(0,0, 0, 0.6);
+        max-width:400px;
+        align-self:stretch;
+        justify-self:center; 
+        padding:3rem;
+        text-align:center;
+        width:100%; 
+    }
+
+    .Title__Wrapper{
+        padding:1.2rem;
+    }
+
+    .Title--Heading{
+        font-size:1rem;
+        text-align: center;
+    }
+
+
+    .Results__Image {
+        height:auto;
+        border-radius:5px; 
+        object-fit: cover;
+        width:100%;
+    }
 }
