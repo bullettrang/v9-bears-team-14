@@ -31,6 +31,14 @@ const Map =()=>{
   }
 
   return (
+    <div
+      style={{
+        position: "relative",
+        height: 0,
+        paddingBottom: "50%",
+        marginBottom:"1rem"
+      }}
+    >
     <div className="Map__Wrapper">
       <ComposableMap
         projectionConfig={{
@@ -39,9 +47,15 @@ const Map =()=>{
         }}
         width={980}
         height={551}
+        // style={{
+        //   width: "100%",
+        //   height: "auto",
+        // }}
+        className="Composable__Map"
         style={{
           width: "100%",
-          height: "auto",
+          height: "100%",
+          overflow: "hidden",
         }}
         >
         <ZoomableGroup center={[0,20]} disablePanning>
@@ -62,6 +76,7 @@ const Map =()=>{
       </ComposableMap>
       <ReactTooltip />
     </div>
+  </div>
   )
 }
 
