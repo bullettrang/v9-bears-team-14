@@ -5,9 +5,20 @@
 }
 
 .Header--Title{
-    letter-spacing: .7em;
+    letter-spacing: 2.7rem;
     font-size:4rem;
-    text-shadow: 1px 1px 3px #000;
-    font-family:sans-serif;
+    font-family: "Source Sans Pro",sans-serif;
+    color:#ff5722;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
+@media (max-width:500px){       /*iphone-x 375px*/
+    .Header--Title{
+        font-size:.8rem;
+        font-family: "Source Sans Pro",sans-serif;
+        color:#ff5722;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+}
