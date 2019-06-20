@@ -1,0 +1,10 @@
+
+.Results__Container{
+    margin-top:5rem;
+}
+@media (max-width:400px){
+    .Container{
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+}
