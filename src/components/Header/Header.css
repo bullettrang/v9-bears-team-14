@@ -15,10 +15,10 @@
 
 @media (max-width:500px){       /*iphone-x 375px*/
     .Header--Title{
-        font-size:.8rem;
+        font-size:4.5em;
         font-family: "Source Sans Pro",sans-serif;
         color:#ff5722;
-        font-weight: 300;
+        font-weight: 400;
         text-transform: uppercase;
     }
 }
