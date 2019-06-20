@@ -1,7 +1,13 @@
 
-.Results__Container{
-    margin-top:5rem;
+
+/*Macbook-air 2018 (1024px)*/
+@media(min-width:1024px){
+    .Results__Container{
+        margin-top:15rem;
+    }
 }
+
+/*iphone-x (375px) */
 @media (max-width:400px){
     .Container{
         display:grid;

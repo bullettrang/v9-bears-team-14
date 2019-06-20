@@ -12,9 +12,10 @@
 .Results__Title{
     font-family: "Source Sans Pro",sans-serif;
     font-size:4rem;
-    letter-spacing: .3 em;
+    letter-spacing: .3em;
     text-align: center;
     text-transform: uppercase;
+    font-weight: 300;
 }
 .Results__Wrapper {
     background-color: white;
@@ -26,12 +27,47 @@
     width: 100%;
 }
 
-
-
 .Title--Heading{
     font-size:2rem;
 }
 
+/*Macbook-air 2018 (1024px)*/
+@media (min-width:1024px){
+    .Results__Card {
+        background-color: #7fcdff;
+        border-radius: 3px;
+        box-shadow: 0 3px 5px rgba(0,0, 0, 0.6);
+        margin: 2em;
+        padding: 2em;
+        width: 25%; 
+    }
+    .Results__Image {
+        width: 7em;
+    }
+    .Results__Title{
+        font-family: "Source Sans Pro",sans-serif;
+        font-size:4rem;
+        letter-spacing: .3em;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    .Results__Wrapper {
+        background-color: white;
+        display: flex;
+        flex: 25%;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 980px;
+        width: 100%;
+    }
+    
+    .Title--Heading{
+        font-size:2rem;
+    }
+}
+
+/*iphone-x (375px) */
 @media (max-width:500px){
     .Results__Wrapper {
         background-color: white;
