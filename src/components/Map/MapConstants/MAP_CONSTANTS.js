@@ -25,20 +25,20 @@
     styles:{
         supportedStyled:{
             default: {
-                fill: "#32CD32",
-                stroke: "#607D8B",
+                fill: "#19be00",
+                stroke: "#5c5c5c",
                 strokeWidth: 1,
                 outline: "none"
               },
               hover: {
                 fill: "#FF5722",
-                stroke: "#607D8B",
+                stroke: "#5c5c5c",
                 strokeWidth: 0.75,
                 outline: "none"
               },
               pressed: {
                 fill: "#FF5722",
-                stroke: "#607D8B",
+                stroke: "#5c5c5c",
                 strokeWidth: 0.75,
                 outline: "none",
                 boxShadow:"0 0 10px #fff"
@@ -47,19 +47,19 @@
         notSupportedStyled:{
             default: {
                 fill: "#ECEFF1",        // any country that is NOT-supported will shaded gray
-                stroke: "#607D8B",
+                stroke: "#5c5c5c",
                 strokeWidth: 0.75,
                 outline: "none"
               },
               hover: {
                 fill: "#ECEFF1",
-                stroke: "#607D8B",
+                stroke: "#5c5c5c",
                 strokeWidth: 0.75,
                 outline: "none",
               },
               pressed: {
                 fill: "#ECEFF1",
-                stroke: "#607D8B",
+                stroke: "#5c5c5c",
                 strokeWidth: 0.75,
                 outline: "none",
                 boxShadow:"0 0 10px #fff"
@@ -68,21 +68,21 @@
       selectedStyled:{
         default:{
           fill: "#FF5722",
-          stroke: "#607D8B",
+          stroke: "#5c5c5c",
           strokeWidth: 0.75,
           outline: "none",
           boxShadow:"0 0 10px #fff"
         },
         hover: {
           fill: "#FF5722",
-          stroke: "#607D8B",
+          stroke: "#5c5c5c",
           strokeWidth: 0.75,
           outline: "none",
           boxShadow:"0 0 10px #fff"
         },
         pressed: {
           fill: "#FF5722",
-          stroke: "#607D8B",
+          stroke: "#5c5c5c",
           strokeWidth: 0.75,
           outline: "none",
           boxShadow:"0 0 10px #fff"

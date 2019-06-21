@@ -2,7 +2,7 @@ import React, {  useState } from "react"
 import ReactTooltip from "react-tooltip"
 import JSONmap from '../../static/world-countries.json';
 import MAP_CONSTANTS from './MapConstants/MAP_CONSTANTS';
-
+import useRecipes from '../../hooks/useRecipes';
 import "./Map.css";
 import {
   ComposableMap,

@@ -1,6 +1,6 @@
 .Header__Wrapper{
     text-align:center;
-    padding:1em;
+    padding:1.8em;
     margin-bottom:1em;
 }
 
@@ -8,8 +8,8 @@
     letter-spacing: 2.7rem;
     font-size:4rem;
     font-family: "Source Sans Pro",sans-serif;
-    color:#ff5722;
-    font-weight: 300;
+    color:#f21d00;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
@@ -17,8 +17,8 @@
     .Header--Title{
         font-size:4.5em;
         font-family: "Source Sans Pro",sans-serif;
-        color:#ff5722;
-        font-weight: 400;
+        color:#f21d00;
+        font-weight: 500;
         text-transform: uppercase;
     }
 }
