@@ -1,6 +1,6 @@
 import {useState,useEffect,useContext} from 'react';
 import axios from 'axios';
-import RecipesContext from '../context/recipes-context'
+import LoadingContext from '../context/loading-context'
 import MAP_CONSTANTS from '../components/Map/MapConstants/MAP_CONSTANTS';
 
 
@@ -11,24 +11,26 @@ import MAP_CONSTANTS from '../components/Map/MapConstants/MAP_CONSTANTS';
  */
 const useRecipes= (country)=>{
     const [recipes,setRecipes]= useState([]);
-    const {setLoading} = useContext(RecipesContext);
+    const {setLoading} = useContext(LoadingContext);
     
     useEffect(
         
          ()=>{
             const {supportedCountries}= MAP_CONSTANTS;          //Need to move into useEffect function to avoid ESLINT error https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies 
+
             ( async country =>{
+                setLoading(true);
+                //document.body.style.overflow = 'hidden';            //this prevents scrolling when modal is open    https://stackoverflow.com/questions/54989513/react-prevent-scroll-when-modal-is-open
                 if(supportedCountries.hasOwnProperty(country)){
-                    setLoading(true);
                     const response = await axios.get(`/api/countries/${supportedCountries[country]}`);
                     setRecipes(response.data);
-                    setLoading(false);
                 }
-                setLoading(true);       
+                setLoading(false);
+                
                 return;
             })(country);
         },
-        [country,setLoading]      //empty [] means it works like componentDidMount
+        [country,setLoading]     
     );
     return recipes;
 }
