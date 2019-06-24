@@ -13,11 +13,12 @@ import {
 
 
 const Map =()=>{
+
   const {countrySelected, setSelectedCountry} = useContext(CountryContext)
   const {supportedCountries} = MAP_CONSTANTS;
   const {supportedStyled,notSupportedStyled,selectedStyled}= MAP_CONSTANTS.styles;
 
-  const getStyles =(countryName)=>{
+  const getCountryStyle =(countryName)=>{
     if(supportedCountries.hasOwnProperty(countryName) && countryName===countrySelected){
       return selectedStyled
     }
@@ -51,8 +52,8 @@ const Map =()=>{
                 geography={geography}
                 projection={projection}
                 data-tip={geography.properties.name}
-                onClick={()=>setSelectedCountry(geography.properties.name)}
-                style={getStyles(geography.properties.name)}
+                onClick={supportedCountries.hasOwnProperty(geography.properties.name)?()=>setSelectedCountry(geography.properties.name):()=>console.log('not supported')}
+                style={getCountryStyle(geography.properties.name)}
               ></Geography>
             ))}
           </Geographies>  
