@@ -13,8 +13,8 @@ module.exports=app=>{
         try{
           const recipes= await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${req.params.country}`)
           console.log(recipes.data.meals);
-    
-          res.send(recipes.data.meals);
+            res.send(`hello from ${req.params.country}`);
+          //res.send(recipes.data.meals);
         }
         catch(error){
             console.log(error);
