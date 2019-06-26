@@ -7,6 +7,7 @@ import MAP_CONSTANTS from '../Map/MapConstants/MAP_CONSTANTS'
 const Results = (props) => {
 const {countrySelected} = useContext(CountryContext)
 const recipes = useRecipes(countrySelected)
+
 return (
     <div >
         {countrySelected.length > 0 &&<h1 className="Results__Title">{MAP_CONSTANTS.supportedCountries[countrySelected]} Recipes</h1>}         
