@@ -1,19 +1,31 @@
-.Header__Wrapper{
-    text-align:center;
-    padding:1em;
-    margin-bottom:1em;
+
+@media(min-width:800px){
+    .Header__Wrapper{
+        text-align:center;
+        padding:1em;
+        margin-top:1.5rem;
+        margin-bottom:1.5rem;
+    }
+    
+    .Header--Title{
+        letter-spacing: 2.7rem;
+        font-size:4rem;
+        font-family: "Source Sans Pro",sans-serif;
+        color:#ff5722;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
 }
 
-.Header--Title{
-    letter-spacing: 2.7rem;
-    font-size:4rem;
-    font-family: "Source Sans Pro",sans-serif;
-    color:#ff5722;
-    font-weight: 300;
-    text-transform: uppercase;
-}
 
 @media (max-width:500px){       /*iphone-x 375px*/
+
+    .Header__Wrapper{
+        text-align:center;
+        padding:1em;
+        margin-top:1.5rem;
+        margin-bottom:1.5rem;
+    }
     .Header--Title{
         font-size:4.5em;
         font-family: "Source Sans Pro",sans-serif;

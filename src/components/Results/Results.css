@@ -1,4 +1,4 @@
-.Results__Card {
+/* .Results__Card {
     background-color: #7fcdff;
     border-radius: 3px;
     box-shadow: 0 3px 5px rgba(0,0, 0, 0.6);
@@ -29,10 +29,49 @@
 
 .Title--Heading{
     font-size:2rem;
+} */
+
+@media (min-width:1025px){
+    .Results__Card {
+        border-radius: 3px;
+        box-shadow: 0 3px 5px rgba(0,0, 0, 0.6);
+        margin: 2em;
+        /* padding: 2em; */
+        /* width: 25%;  */
+    }
+    .Results__Image {
+        /* width: 7em; */
+        object-fit: cover;
+        height:250px;
+    }
+    .Results__Title{
+        font-family: "Source Sans Pro",sans-serif;
+        font-size:4rem;
+        letter-spacing: .3em;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    .Results__Wrapper {
+        background-color: white;
+        display: flex;
+        flex: 25%;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 980px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .Title--Heading{
+        font-size:2rem;
+    }
+    
 }
 
+
 /*Macbook-air 2018 (1024px)*/
-@media (min-width:1024px){
+/* @media (min-width:1024px){
     .Results__Card {
         background-color: #7fcdff;
         border-radius: 3px;
@@ -65,6 +104,43 @@
     .Title--Heading{
         font-size:2rem;
     }
+} */
+
+/*Macbook-air 2018 (1024px)*/
+@media (min-width:1024px){
+    .Results__Card {
+        border-radius: 3px;
+        box-shadow: 0 3px 5px rgba(0,0, 0, 0.6);
+        margin: 2em;
+        padding: 2em;
+        /* width: 25%;  */
+    }
+    .Results__Image {
+        object-fit:contain;
+        height:250px;
+    }
+    .Results__Title{
+        font-family: "Source Sans Pro",sans-serif;
+        font-size:4rem;
+        letter-spacing: .3em;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    .Results__Wrapper {
+        background-color: white;
+        display: flex;
+        flex: 25%;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 980px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .Title--Heading{
+        font-size:2rem;
+    }
 }
 
 /*iphone-x (375px) */
@@ -76,6 +152,55 @@
         grid-template-rows: 1fr;
         margin: 0 auto;
         max-width: 400px;   /*iphone-x 375 and below*/
+        justify-items:center;
+    }
+
+    .Results__Title{
+        font-family: "Source Sans Pro",sans-serif;
+        font-size:4rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .Results__Card {
+        /* background-color: #7fcdff; */
+        border-radius: 3px;
+        box-shadow: 0 3px 5px rgba(0,0, 0, 0.6);
+        max-width:400px;
+        align-self:stretch;
+        justify-self:center; 
+        padding:3rem;
+        text-align:center;
+        width:100%; 
+    }
+
+    .Title__Wrapper{
+        padding:1.2rem;
+    }
+
+    .Title--Heading{
+        font-size:3rem;
+        text-align: center;
+    }
+
+
+    .Results__Image {
+        height:50px;
+        border-radius:5px; 
+        object-fit: cover;
+        width:100%;
+    }
+}
+
+/*iphone-x (375px) */
+/* @media (max-width:500px){
+    .Results__Wrapper {
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin: 0 auto;
+        max-width: 400px;   
         justify-items:center;
     }
 
@@ -114,4 +239,4 @@
         object-fit: cover;
         width:100%;
     }
-}
+} */
