@@ -10,15 +10,15 @@ module.exports=app=>{
      */
     app.get("/api/countries/:country", async (req,res)=>{
         console.log(req.params.country)
-        try{
-          const recipes= await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${req.params.country}`)
-          console.log(recipes.data.meals);
-            res.send(`hello from ${req.params.country}`);
-          //res.send(recipes.data.meals);
-        }
-        catch(error){
-            console.log(error);
-            res.send(error);
-        }
+        res.send("hello from countries");
+        // try{
+        //   const recipes= await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${req.params.country}`)
+        //   console.log(recipes.data.meals);
+        //   res.send(recipes.data.meals);
+        // }
+        // catch(error){
+        //     console.log(error);
+        //     res.send(error);
+        // }
     })
 }
