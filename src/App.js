@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Map from './components/Map/Map';
 import Header from './components/Header/Header';
 import Results from './components/Results/Results';
 import './App.css';
+import CountryContext from './context/country-context'
+
 
 function App() {
+  const [countrySelected, setSelectedCountry] = useState('')
   return (
+    <CountryContext.Provider value={ {countrySelected, setSelectedCountry}} >
     <div className="App">
       <div className="Container">
         <Header/>
@@ -17,6 +21,7 @@ function App() {
         </section>
       </div>
     </div>
+    </CountryContext.Provider>     
   );
 }
 

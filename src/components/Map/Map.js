@@ -1,8 +1,8 @@
-import React, {  useState } from "react"
+import React, { useContext } from "react"
 import ReactTooltip from "react-tooltip"
 import JSONmap from '../../static/world-countries.json';
 import MAP_CONSTANTS from './MapConstants/MAP_CONSTANTS';
-
+import CountryContext from '../../context/country-context'
 import "./Map.css";
 import {
   ComposableMap,
@@ -13,11 +13,9 @@ import {
 
 
 const Map =()=>{
-  const [countrySelected,setCountry] = useState("");    
-
+  const {countrySelected, setSelectedCountry} = useContext(CountryContext)
   const {supportedCountries} = MAP_CONSTANTS;
   const {supportedStyled,notSupportedStyled,selectedStyled}= MAP_CONSTANTS.styles;
-
 
   const getStyles =(countryName)=>{
     if(supportedCountries.hasOwnProperty(countryName) && countryName===countrySelected){
@@ -67,7 +65,7 @@ const Map =()=>{
                 geography={geography}
                 projection={projection}
                 data-tip={geography.properties.name}
-                onClick={()=>setCountry(geography.properties.name)}
+                onClick={()=>setSelectedCountry(geography.properties.name)}
                 style={getStyles(geography.properties.name)}
               ></Geography>
             ))}
