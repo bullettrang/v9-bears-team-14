@@ -185,7 +185,7 @@
 
 
     .Results__Image {
-        height:50px;
+        width:50px;
         border-radius:5px; 
         object-fit: cover;
         width:100%;
