@@ -18,7 +18,7 @@ const useRecipes= (country)=>{
                 if(supportedCountries.hasOwnProperty(country)){
                     const recipes= await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${supportedCountries[country]}`)
                     //const response = await axios.get(`/api/countries/${supportedCountries[country]}`);
-                    setRecipes(recipes.data);
+                    setRecipes(recipes.data.meals);
                 }       
                 return;
             })(country);
