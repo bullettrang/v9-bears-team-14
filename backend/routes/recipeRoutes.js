@@ -1,8 +1,6 @@
 const axios = require('axios');     //http client
 module.exports=app=>{
-    app.get('/',(req,res)=>{
-        res.send({hi:'there from Geo-foods'})
-    })
+
     
     /**
      * @function - this is a route that handles GET requests for a country's recipes, takes in a country name params
@@ -10,15 +8,15 @@ module.exports=app=>{
      */
     app.get("/api/countries/:country", async (req,res)=>{
         console.log(req.params.country)
-        res.send("hello from countries");
-        // try{
-        //   const recipes= await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${req.params.country}`)
-        //   console.log(recipes.data.meals);
-        //   res.send(recipes.data.meals);
-        // }
-        // catch(error){
-        //     console.log(error);
-        //     res.send(error);
-        // }
+
+        try{
+          const recipes= await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${req.params.country}`)
+          console.log(recipes.data.meals);
+          res.send(recipes.data.meals);
+        }
+        catch(error){
+            console.log(error);
+            res.send(error);
+        }
     })
 }
