@@ -15,6 +15,10 @@ if(process.env.NODE_ENV === 'production'){
     app.get('*',(req,res)=>{
         res.sendFile(path.resolve(__dirname,'../','build','index.html'));
     })
+    delete process.env['http_proxy'];
+    delete process.env['HTTP_PROXY'];
+    delete process.env['https_proxy'];
+    delete process.env['HTTPS_PROXY'];
 }
 
 const PORT = process.env.port || 5000;
