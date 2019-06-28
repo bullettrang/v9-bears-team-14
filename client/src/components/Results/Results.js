@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 
-import { useTrail, animated } from 'react-spring'
+import { useTrail, animated,useTransition } from 'react-spring'
 import './Results.css'
 import useRecipes from '../../hooks/useRecipes';
 import CountryContext from '../../context/country-context'
@@ -10,6 +10,15 @@ const Results = (props) => {
 const {countrySelected} = useContext(CountryContext)
 let recipes=[];
  recipes = useRecipes(countrySelected)
+
+ const transitions = useTransition(countrySelected, null, {
+    from: { opacity: 0, height: 0, },
+    enter: [
+      { opacity: 1, height: 80, },
+    ],
+    leave: [  { opacity: 0, height: 0 }],
+    update: { color: '#28b4d7' },
+  })
 
 const trail = useTrail(recipes.length, {
     to:{opacity:1},
@@ -27,7 +36,12 @@ const trail = useTrail(recipes.length, {
 //   ))}
 return (
     <div >
-        {countrySelected.length > 0 &&<h1 className="Results__Title">{MAP_CONSTANTS.supportedCountries[countrySelected]} Recipes</h1>}         
+        {/* {countrySelected.length > 0 &&<h1 className="Results__Title">{MAP_CONSTANTS.supportedCountries[countrySelected]} Recipes</h1>}          */}
+        {transitions.map(({ item, props: { innerHeight, ...rest }, key }) => (
+        <animated.h1 className="Results__Title"key={key} style={rest} >
+            {MAP_CONSTANTS.supportedCountries[item]} Recipes
+        </animated.h1>
+      ))}
         <div className="Results__Wrapper">
             {trail.map(({...rest},index) => 
                 <animated.div key={recipes[index].idMeal} className="Results__Card" style={rest}>

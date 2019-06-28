@@ -24,4 +24,5 @@
     margin: 0 auto;
     max-width: 980px;
     width: 100%;
+    justify-content: center;
 }

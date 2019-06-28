@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import {useTransition, animated} from 'react-spring';
 import './Header.css';
-const Header =(props)=>{
+const Header =()=>{
     const [show, set] = useState(false)
 
     const transitions = useTransition(show, null, {
