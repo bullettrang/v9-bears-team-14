@@ -8,6 +8,7 @@ const Results = (props) => {
 const {countrySelected} = useContext(CountryContext)
 const recipes = useRecipes(countrySelected)
 
+//todo add words to top of picture
 return (
     <div >
         {countrySelected.length > 0 &&<h1 className="Results__Title">{MAP_CONSTANTS.supportedCountries[countrySelected]} Recipes</h1>}         
