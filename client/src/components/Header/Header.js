@@ -10,11 +10,8 @@ const Header =(props)=>{
         leave: { opacity: 0 },
         })
 
-    useEffect(() =>  set(state => !state), [])
+    useEffect(() =>  set(state => !state), [])      //on mount, animate Header component in
     return(
-        // <header className="Header__Wrapper">
-        //     <h1 className="Header--Title">Geo-Foods</h1>
-        // </header>
 
          transitions.map(({item,key,props})=> <animated.header key={key} style={props} className="Header__Wrapper">
              <h1 className="Header--Title"> Geo-Foods</h1>
