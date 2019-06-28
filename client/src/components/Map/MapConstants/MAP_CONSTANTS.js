@@ -16,7 +16,7 @@
         "Kenya":"Kenyan",
         "Malaysia":"Malaysian",
         "Mexico":"Mexican",
-        "Moroco":"Moroccan",
+        "Morocco":"Moroccan",
         "Russia":"Russian",
         "Spain":"Spanish",
         "Thailand":"Thai",
