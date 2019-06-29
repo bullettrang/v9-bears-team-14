@@ -28,7 +28,7 @@ describe("Map",()=>{
 
       });
 
-      it('should render the correct # of API supported countries with color "#32CD32" ', () => {
+      it('should render the correct # of API supported countries with prop.name as country name ', () => {
         const TOTAL_SUPPORTED = Object.keys(MAP_CONSTANTS.supportedCountries).length;
         const wrapper = mount(<Map />);
         const found =wrapper.find(Geographies);
@@ -37,8 +37,7 @@ describe("Map",()=>{
 
         let count =0;
         for(let i=0;i<countries.length;i++){
-            //console.log(countries.get(i));
-            if(countries.get(i).props.style.default.fill==="#32CD32"){
+            if(countries.get(i).props.name!=="NOT SUPPORTED"){
                 count++;
             }
         }
