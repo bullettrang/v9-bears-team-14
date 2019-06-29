@@ -21,7 +21,6 @@ describe("Map",()=>{
     })
 
     it('should render 179 countries', () => {
-
         const wrapper = mount(<Map />);
         const found =wrapper.find(Geographies);
          const countries = found.find(Geography);
