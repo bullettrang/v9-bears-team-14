@@ -37,9 +37,12 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^1.1.0",
+    "axios-mock-adapter": "^1.17.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "jest": "^24.7.1",
-    "jest-enzyme": "^7.0.2"
+    "jest-enzyme": "^7.0.2",
+    "react-test-renderer": "^16.8.6"
   }
 }
