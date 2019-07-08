@@ -15,6 +15,7 @@ const Header =()=>{
 
          transitions.map(({item,key,props})=> <animated.header key={key} style={props} className="Header__Wrapper">
              <h1 className="Header--Title"> Geo-Foods</h1>
+             <h2 className="Header--title Header--subtitle">Explore the World's Cuisines</h2>
          </animated.header>)
     )
 }
