@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import {useTransition, animated} from 'react-spring';
-import './Header.css';
+import './_header.scss';
 const Header =()=>{
     const [show, set] = useState(false)
 
@@ -13,8 +13,8 @@ const Header =()=>{
     useEffect(() =>  set(state => !state), [])      //on mount, animate Header component in
     return(
 
-         transitions.map(({item,key,props})=> <animated.header key={key} style={props} className="Header__Wrapper">
-             <h1 className="Header--Title"> Geo-Foods</h1>
+         transitions.map(({item,key,props})=> <animated.header key={key} style={props} className="Header--wrapper">
+             <h1 className="Header--title"> Geo-Foods</h1>
              <h2 className="Header--title Header--subtitle">Explore the World's Cuisines</h2>
          </animated.header>)
     )

@@ -32,7 +32,7 @@ function App() {
         />
         {showModal && (
           <React.Fragment>
-            <Modal />{" "}
+            <Modal />
             <Preview
               ref={videoEl}
               previewSelected={previewSelected}
